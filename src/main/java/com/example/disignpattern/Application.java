@@ -1,5 +1,6 @@
 package com.example.disignpattern;
 
+import com.example.disignpattern.controller.Controller;
 import com.example.disignpattern.model.Model;
 import com.example.disignpattern.view.MainView;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +20,8 @@ public class Application {
 
     private static void runApp() {
         Model model = new Model();
-
         MainView view = new MainView(model);
+
+        Controller controller = new Controller(model, view);
     }
 }
